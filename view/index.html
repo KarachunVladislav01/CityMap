@@ -1,0 +1,130 @@
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../assers/css/index.css" />
+    <script type="module" src="../app.js"></script>
+    <script
+      src="//cdn.webix.com/site/webix.js?v=7.1.4"
+      type="text/javascript"
+    ></script>
+    <link
+      rel="STYLESHEET"
+      type="text/css"
+      href="//cdn.webix.com/site/webix.css?v=7.1.4"
+    />
+  </head>
+
+  <body>
+    <div class="grid-center">
+      <div id="filter">
+        <div>
+          <input id="state-input" placeholder="Enter state" type="text" />
+          <button id="filter-by-state">filter</button>
+          <button id="refresh-cities-list">refresh</button>
+        </div>
+      </div>
+      <ul id="list-of-cities" class="list-of-cities">
+        <!-- TEMPLATE(tmp-city) ADDED DYNAMICALLY BY JS -->
+      </ul>
+      <div class="left-bottom-bar">
+        <button id="add-new-city">Add</button>
+      </div>
+      <div id="modal-add-new-city" class="modal-content">
+        <div class="modal-header-title">Add new city</div>
+        <form id="create-city">
+          <div class="node-padding">
+            <span class="required-field">*</span>
+            <span>City:</span>
+            <input
+              class="modal-input"
+              type="text"
+              placeholder="Enter city"
+              name="cityName"
+            />
+          </div>
+          <div class="node-padding">
+            <span class="required-field">*</span>
+            <span>State:</span>
+            <input
+              class="modal-input"
+              type="text"
+              placeholder="Enter state"
+              name="state"
+            />
+          </div>
+          <div class="node-padding">
+            <span class="required-field">*</span>
+            <span>latitude:</span>
+            <input
+              class="modal-input"
+              type="number"
+              placeholder="Enter latitude"
+              name="latitude"
+            />
+          </div>
+          <div class="node-padding">
+            <span class="required-field">*</span>
+            <span>longitude:</span>
+            <input
+              class="modal-input"
+              type="number"
+              placeholder="Enter longitude"
+              name="longitude"
+            />
+          </div>
+          <div class="modal-footer">
+            <div>
+              <button id="add-city" type="submit">
+                Create
+              </button>
+              <button id="add-city-cancel" class="modal-cancel-button">
+                Cancel
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div id="statesList"></div>
+      <div id="extremeCities">
+        <div id="northernmost"></div>
+        <div id="westernmost"></div>
+        <div id="compassImg"></div>
+        <div id="easternmost"></div>
+        <div id="southernmost"></div>
+      </div>
+
+      <div id="states-chart"></div>
+
+      <div class="right-bottom-bar">
+        <div id="show-nearest-city-panel">
+          <input
+            id="latitude-input"
+            type="number"
+            placeholder="Enter latitude:"
+          />
+          <input
+            id="longitude-input"
+            type="number"
+            placeholder="Enter longitude:"
+          />
+          <button id="show-nearest-city">
+            show nearest city
+          </button>
+          <span id="nearest-city"></span>
+        </div>
+        <div id="show-state-list-panel">
+          <button id="show-states-list">states list</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<template id="tmp-city">
+  <li class="city">
+    <div class="cityNameState"></div>
+    <div class="latitude"></div>
+    <div class="longitude"></div>
+  </li>
+</template>
+
+<div id="modalWindow" class="modal"></div>

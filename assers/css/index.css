@@ -1,0 +1,209 @@
+button {
+  border-radius: 0.2rem;
+  height: 1.4rem;
+  border: none;
+  min-width: 3rem;
+}
+input::placeholder {
+  padding-left: 0.3rem;
+}
+.list-of-cities {
+  width: 30rem;
+  grid-area: 2/1/3/2;
+  background-color: transparent;
+  padding-inline-start: 0;
+  margin: 2rem;
+}
+.city {
+  display: grid;
+  grid-template: 1fr/1fr 1fr 1fr;
+  height: 3rem;
+  justify-items: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: white;
+  border-bottom: 0.4rem solid #dadada;
+}
+
+.city:first-child {
+  border-top: 0.4rem solid #dadada;
+}
+
+.grid-center {
+  display: grid;
+  grid-template: 4rem 1fr/1fr 1fr 1fr;
+  font-style: normal;
+  font-family: sans-serif;
+}
+
+#filter {
+  display: grid;
+  align-content: end;
+  margin-left: 4rem;
+}
+
+#extremeCities {
+  display: grid;
+  grid-template: 1fr 3fr 1fr/1fr 3fr 1fr;
+  grid-area: 2/2/3/3;
+  justify-items: center;
+  align-items: center;
+}
+
+#compassImg {
+  background-size: contain;
+  background-image: url("../img/compass.png");
+  width: 20rem;
+  height: 20rem;
+  display: grid;
+  grid-area: 2/2/3/3;
+}
+
+#northernmost {
+  display: grid;
+  grid-area: 1/2/2/3;
+  align-self: flex-end;
+}
+
+#southernmost {
+  display: grid;
+  grid-area: 3/2/4/3;
+  align-self: flex-start;
+}
+
+#westernmost {
+  display: grid;
+  grid-area: 2/1/3/2;
+}
+
+#easternmost {
+  display: grid;
+  grid-area: 2/3/3/4;
+}
+
+#states-chart {
+  display: grid;
+  grid-area: 2/3/3/4;
+}
+
+#statesList {
+  display: grid;
+  grid-area: 1/2/2/4;
+  justify-content: center;
+  align-content: center;
+  font-size: 25;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  display: none;
+  background-color: #fefefe;
+  font-style: normal;
+  font-family: sans-serif;
+  color: #373737de;
+  margin: 5% auto;
+  border-radius: 0.5rem;
+  border: 1px solid #888;
+  width: 25rem;
+  z-index: 2;
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+
+.modal-header-title {
+  border-bottom: 0.1rem solid gray;
+  height: 2.5rem;
+  font-size: 1.5rem;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 1rem;
+}
+
+.modal-footer {
+  height: 2.5rem;
+  background-color: #2f3b47;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 1rem;
+}
+
+.modal-input {
+  width: -webkit-fill-available;
+  height: 1.3rem;
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+  margin-top: 0.2rem;
+}
+
+.modal-input::placeholder {
+  font-style: italic;
+}
+
+.modal-textarea {
+  resize: none;
+  height: 2.6rem;
+}
+
+.node-padding {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+#nearest-city {
+  color: white;
+}
+
+.right-bottom-bar,
+.left-bottom-bar {
+  background-color: rgb(67, 79, 91, 0.9);
+  position: fixed;
+  height: 2rem;
+  bottom: 0.7rem;
+  padding-right: 0.3rem;
+  border-radius: 0.3rem;
+  display: grid;
+  align-items: center;
+  justify-content: end;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  z-index: 3;
+}
+
+.right-bottom-bar {
+  left: 38.5rem;
+  right: 2rem;
+  display: grid;
+  grid-template: 1fr/6fr 1fr;
+}
+
+.left-bottom-bar {
+  left: 2rem;
+  width: 33rem;
+}
+
+#show-nearest-city-panel {
+  justify-self: left;
+}
+
+#show-state-list-panel {
+  justify-self: right;
+}
+
+.required-field {
+  color: rgb(194, 10, 10);
+}
